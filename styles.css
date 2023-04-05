@@ -1,0 +1,73 @@
+body {
+  background: rgb(91,98,111);
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+}
+canvas {
+  width: 100%;
+  height: auto;
+  padding-bottom: 0%;
+  position: relative;
+  aspect-ratio: 1 / 1;
+}
+@media (max-height: 100vw) {
+  canvas {
+    height: 100%;
+    width: auto;
+  }
+}
+button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: rgb(31,38,61);
+  outline: none;
+  border: 0;
+  height: 3em;
+  padding: 0;
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-top-left-radius: 10px;
+  color: white;
+}
+#statsContainer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 3em;
+  overflow: hidden;
+  text-align: center;
+  background: rgb(31,38,61);
+  color: white;
+  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: height 0.15s linear;
+  border-top-right-radius: 10px;
+}
+#statsContainer:hover, #statsContainer[open~="true"] {
+  height: 10em
+}
+#statsContainer[open~="true"] {
+  outline: none;
+  box-shadow: 0px 0px 5px white,
+              0px 0px 5px white,
+              0px 0px 5px white
+}
+p {
+  color: white;
+}
+.stat:before {
+  content: attr(label)": "
+}
+h3 {
+  margin: 10px;
+  padding: 0;
+  font-family "Times New Roman";
+  font-size: 16px
+}
