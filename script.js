@@ -119,7 +119,7 @@ class ParticleSystem {
   }
   addImage(src) {
     this.imgName = src
-    this.img.src = 'Images/'+src+'.png'
+    this.img.src = 'images/'+src+'.png'
     this.img.onload = () => {
       // this.imgCtx.drawImage(this.img,0,0)
       let aspect = this.img.width/this.img.height
